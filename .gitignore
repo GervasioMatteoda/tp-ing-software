@@ -10,6 +10,26 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Ignorar carpetas de NetBeans específicas del usuario
+nbproject/private/
+
+# Ignorar carpetas generadas por la compilación
+build/
+nbbuild/
+dist/
+nbdist/
+
+# Ignorar configuración de Gradle en NetBeans
+.nb-gradle/
+
+# Ignorar archivos generados por el sistema operativo
+*.DS_Store
+*.tmp
+*.bak
+
+# Ignorar carpetas de bibliotecas locales
+lib/
+
 # Package Files #
 *.jar
 *.war
