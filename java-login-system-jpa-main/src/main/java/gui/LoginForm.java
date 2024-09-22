@@ -199,7 +199,25 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        
+        try {
+            String id = txtUsername.getText();
+            String clave = new String(txtClave.getPassword());
+            if (!(id.isEmpty()) && !(clave.isEmpty())) {
+                if (gestorUsuario.validacionUsuario(id, clave)) {
+                    MessageUtil.mensajeInformacion("Inicio de Sesión", "El inicio de sesión se ejecuto de manera éxitosa");
+                } else {
+                    MessageUtil.mensajeInformacion("Inicio de Sesión", "El inicio de sesión se ejecuto de manera fallida");
+                }
+            } else {
+                MessageUtil.mensajeAdvertencia("Error: Campos Vacíos", "No se permiten campo/s vacío/s");
+            }
+        } catch (DAOException e) {
+            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error en la capa de DAO: \n" + e.getMessage());
+        } catch (GestorException e) {
+            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error en la capa del Gestor: \n" + e.getMessage());
+        } catch (Exception e) {
+            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error: \n" + e.getMessage());
+        }
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
