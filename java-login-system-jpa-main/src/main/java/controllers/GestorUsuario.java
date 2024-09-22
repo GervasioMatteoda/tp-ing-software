@@ -12,6 +12,11 @@ public class GestorUsuario {
     EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("com.sistema-login");
     EntityManager manager = managerFactory.createEntityManager();
     
+    // Acción de HotFix: Cambio Urgente
+    public void hotfix () {
+        System.out.println("Solución al problema");
+    }
+
     private UsuarioDAOImpl usuarioImpl;
     
     public boolean validacionUsuario (String id, String clave) {
