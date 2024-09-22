@@ -20,7 +20,7 @@ public class GestorUsuario {
             UsuarioDTO usuarioDTO = new UsuarioDTO(Integer.parseInt(id), clave);
             return !usuarioImpl.buscarUsuarioLogin(usuarioDTO).isEmpty();
         } catch (Exception e) {
-            throw new GestorException("Error: Validar Usuario", e);
+            throw new GestorException("Error en Gestor: Ups! Hubo un error en la validación de usuario", e);
         }
     }
 }
