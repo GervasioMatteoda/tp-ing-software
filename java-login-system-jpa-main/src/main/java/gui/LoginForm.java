@@ -209,14 +209,14 @@ public class LoginForm extends javax.swing.JFrame {
                     MessageUtil.mensajeInformacion("Inicio de Sesión", "El inicio de sesión se ejecuto de manera fallida");
                 }
             } else {
-                MessageUtil.mensajeAdvertencia("Error: Campos Vacíos", "No se permiten campo/s vacío/s");
+                MessageUtil.mensajeAdvertencia("Error: Campos Vacíos", "Ojo! No se permiten campo/s vacío/s");
             }
         } catch (DAOException e) {
-            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error en la capa de DAO: \n" + e.getMessage());
+            MessageUtil.mensajeError("Error en el Botón Aceptar", "Ups! Hubo un error relacionado al DAO: \n" + e.getMessage());
         } catch (GestorException e) {
-            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error en la capa del Gestor: \n" + e.getMessage());
+            MessageUtil.mensajeError("Error en el Botón Aceptar", "Ups! Hubo un error relacionado al Gestor: \n" + e.getMessage());
         } catch (Exception e) {
-            MessageUtil.mensajeError("Error: Botón Aceptar", "Hubo un error: \n" + e.getMessage());
+            MessageUtil.mensajeError("Error en el Botón Aceptar", "Ups! Hubo un error: \n" + e.getMessage());
         }
     }//GEN-LAST:event_btnAceptarActionPerformed
 
@@ -227,7 +227,7 @@ public class LoginForm extends javax.swing.JFrame {
                 this.dispose();
             }
         } catch (Exception e) {
-            MessageUtil.mensajeError("Error: Cancelar", "Hubo un error: \n" + e.getMessage());
+            MessageUtil.mensajeError("Error: Cancelar", "Ups! Hubo un error: \n" + e.getMessage());
         }
     }//GEN-LAST:event_btnCancelarActionPerformed
 
